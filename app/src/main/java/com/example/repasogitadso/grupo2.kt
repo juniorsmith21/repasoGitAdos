@@ -1,20 +1,30 @@
 package com.example.repasogitadso
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class grupo2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_grupo2)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+
+
+        val etDatoGrupo = findViewById<EditText>(R.id.etDatoGrupo)
+        val btnAccionGrupo = findViewById<Button>(R.id.btnAccionGrupo)
+        val tvResultadoGrupo = findViewById<TextView>(R.id.tvResultadoGrupo)
+
+        btnAccionGrupo.setOnClickListener {
+            val textoIngresado = etDatoGrupo.text.toString()
+
+            if (textoIngresado.isNotEmpty()) {
+                tvResultadoGrupo.text = "Texto guardado: $textoIngresado"
+            } else {
+                tvResultadoGrupo.text = "Por favor escribe algo primero."
+            }
         }
     }
 }
