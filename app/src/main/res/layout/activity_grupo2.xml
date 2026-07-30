@@ -26,7 +26,7 @@
         android:id="@+id/btnAccionGrupo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mostrar mensaje en pantalla"/>
+        android:text="Mostrar mensaje en   pantalla"/>
 
     <TextView
         android:id="@+id/tvResultadoGrupo"
