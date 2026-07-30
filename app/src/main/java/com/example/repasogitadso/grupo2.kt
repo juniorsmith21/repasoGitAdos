@@ -11,6 +11,8 @@ class grupo2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_grupo2)
 
+
+
         val etDatoGrupo = findViewById<EditText>(R.id.etDatoGrupo)
         val btnAccionGrupo = findViewById<Button>(R.id.btnAccionGrupo)
         val tvResultadoGrupo = findViewById<TextView>(R.id.tvResultadoGrupo)
